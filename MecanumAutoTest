@@ -89,10 +89,9 @@ public class MechanumAutonomous extends LinearOpMode {
             */
 
             // Send calculated power to wheels
-            leftFrontDrive.setPower(leftFrontPower);
-            rightFrontDrive.setPower(rightFrontPower);
-            leftBackDrive.setPower(leftBackPower);
-            rightBackDrive.setPower(rightBackPower);
+            //forward
+            input(0.4, 0.4, 0.4, 0.4);
+            //
 
             
             // Show the elapsed game time and wheel power.
@@ -105,5 +104,8 @@ public class MechanumAutonomous extends LinearOpMode {
     public void input(double leftFront, double rightFront, double leftBack, double rightBack)
     {
         leftFrontDrive.setPower(leftFront);
+        rightFrontDrive.setPower(rightFront);
+        leftBackDrive.setPower(leftBack);
+        rightBackDrive.setPower(rightBack);
     }
 }
